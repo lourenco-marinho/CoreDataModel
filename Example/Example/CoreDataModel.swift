@@ -11,6 +11,6 @@ import CoreData
 
 protocol CoreDataModel: ModelType {
     
-    typealias Context = NSManagedObjectContext
+    associatedtype Context = NSManagedObjectContext
     
 }

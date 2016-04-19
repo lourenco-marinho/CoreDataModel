@@ -28,7 +28,18 @@ extension CoreDataModel where Self: NSManagedObject {
 
 extension CoreDataModel where Self: NSManagedObject {
     func save() {
-        try! Self.context.save()
+        if Self.context.hasChanges {
+            do  {
+                try Self.context.save()
+            } catch {
+                fatalError("Could not save changes on NSManagedObjectContext.")
+            }
+        }
+    }
+    
+    static func new() -> Self {
+        let newEntity = NSEntityDescription.insertNewObjectForEntityForName(Self.entityName, inManagedObjectContext: Self.context) as! Self
+        return newEntity
     }
 }
 
@@ -49,21 +60,21 @@ extension CoreDataModel where Self: NSManagedObject {
 
 extension CoreDataModel where Self: NSManagedObject {
     static func all() -> [Self] {
-        let fetchRequest = NSFetchRequest(entityName: Self.className)
+        let fetchRequest = NSFetchRequest(entityName: Self.entityName)
         fetchRequest.predicate = NSPredicate(value: true)
         
         return try! context.executeFetchRequest(fetchRequest) as! [Self]
     }
     
     static func find(predicate: NSPredicate) -> [Self] {
-        let fetchRequest = NSFetchRequest(entityName: Self.className)
+        let fetchRequest = NSFetchRequest(entityName: Self.entityName)
         fetchRequest.predicate = predicate
         
         return try! context.executeFetchRequest(fetchRequest) as! [Self]
     }
     
     static func count() -> Int {
-        let fetchRequest = NSFetchRequest(entityName: Self.className)
+        let fetchRequest = NSFetchRequest(entityName: Self.entityName)
         return context.countForFetchRequest(fetchRequest, error: nil)
     }
     

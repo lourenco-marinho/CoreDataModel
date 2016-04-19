@@ -18,7 +18,7 @@ protocol ModelType: ActiveRecordType {
         A generic placeholder to a database context.
      */
     
-    typealias Context
+    associatedtype Context
     
     /**
         Returns the database context.

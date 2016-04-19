@@ -23,19 +23,15 @@ class ViewController: UIViewController {
     }
     
     private func loadModels() {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context = appDelegate.managedObjectContext
-        let entity = NSEntityDescription.entityForName(Person.className, inManagedObjectContext: context)!
-        
-        let joaoPedro = NSManagedObject(entity: entity, insertIntoManagedObjectContext: context) as! Person
+        let joaoPedro = Person.new()
         joaoPedro.name = "João Pedro"
         joaoPedro.save()
         
-        let joaoPaulo = NSManagedObject(entity: entity, insertIntoManagedObjectContext: context) as! Person
+        let joaoPaulo = Person.new()
         joaoPaulo.name = "João Paulo"
         joaoPaulo.save()
         
-        let maria = NSManagedObject(entity: entity, insertIntoManagedObjectContext: context) as! Person
+        let maria = Person.new()
         maria.name = "Maria Joaquina"
         maria.save()
     }

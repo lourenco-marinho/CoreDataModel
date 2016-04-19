@@ -17,4 +17,10 @@ protocol Writeable {
         Saves the object to a data store
      */
     func save()
+    
+    
+    /**
+        Creates a new object
+    */
+    static func new() -> Self
 }

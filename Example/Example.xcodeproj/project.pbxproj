@@ -18,7 +18,7 @@
 		A921FC311C909C24009761E1 /* CoreDataModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921FC291C909C24009761E1 /* CoreDataModel+CoreData.swift */; };
 		A921FC321C909C24009761E1 /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921FC2A1C909C24009761E1 /* Deletable.swift */; };
 		A921FC331C909C24009761E1 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921FC2B1C909C24009761E1 /* ModelType.swift */; };
-		A921FC341C909C24009761E1 /* NSManagedObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921FC2C1C909C24009761E1 /* NSManagedObject+ClassName.swift */; };
+		A921FC341C909C24009761E1 /* NSManagedObject+EntityName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921FC2C1C909C24009761E1 /* NSManagedObject+EntityName.swift */; };
 		A921FC351C909C24009761E1 /* Readeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921FC2D1C909C24009761E1 /* Readeable.swift */; };
 		A921FC361C909C24009761E1 /* Writable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921FC2E1C909C24009761E1 /* Writable.swift */; };
 		A921FC3F1C909D02009761E1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A921FC3D1C909D02009761E1 /* Person.swift */; };
@@ -38,7 +38,7 @@
 		A921FC291C909C24009761E1 /* CoreDataModel+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataModel+CoreData.swift"; sourceTree = "<group>"; };
 		A921FC2A1C909C24009761E1 /* Deletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deletable.swift; sourceTree = "<group>"; };
 		A921FC2B1C909C24009761E1 /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
-		A921FC2C1C909C24009761E1 /* NSManagedObject+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+ClassName.swift"; sourceTree = "<group>"; };
+		A921FC2C1C909C24009761E1 /* NSManagedObject+EntityName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+EntityName.swift"; sourceTree = "<group>"; };
 		A921FC2D1C909C24009761E1 /* Readeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Readeable.swift; sourceTree = "<group>"; };
 		A921FC2E1C909C24009761E1 /* Writable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Writable.swift; sourceTree = "<group>"; };
 		A921FC3D1C909D02009761E1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				A921FC291C909C24009761E1 /* CoreDataModel+CoreData.swift */,
-				A921FC2C1C909C24009761E1 /* NSManagedObject+ClassName.swift */,
+				A921FC2C1C909C24009761E1 /* NSManagedObject+EntityName.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 				A921FC311C909C24009761E1 /* CoreDataModel+CoreData.swift in Sources */,
 				A921FC301C909C24009761E1 /* CoreDataModel.swift in Sources */,
 				A921FC331C909C24009761E1 /* ModelType.swift in Sources */,
-				A921FC341C909C24009761E1 /* NSManagedObject+ClassName.swift in Sources */,
+				A921FC341C909C24009761E1 /* NSManagedObject+EntityName.swift in Sources */,
 				A921FC351C909C24009761E1 /* Readeable.swift in Sources */,
 				A921FC361C909C24009761E1 /* Writable.swift in Sources */,
 				A921FC3F1C909D02009761E1 /* Person.swift in Sources */,
@@ -366,6 +366,7 @@
 				A921FC241C909B9C009761E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

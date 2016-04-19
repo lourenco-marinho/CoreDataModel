@@ -1,5 +1,5 @@
 //
-//  NSManagedObject+ClassName.swift
+//  NSManagedObject+EntityName.swift
 //  Example
 //
 //  Created by Lourenço Marinho on 09/03/16.
@@ -11,7 +11,7 @@ import CoreData
 
 extension NSManagedObject {
     
-    static var className: String {
+    static var entityName: String {
         return String(self)
     }
     
